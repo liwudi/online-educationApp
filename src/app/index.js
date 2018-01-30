@@ -20,7 +20,7 @@ import Main from './pages/Main';
 class App extends Component{
     render(){
         return (
-            <div className="fx1">
+            <div className="fx1 wrapper">
                 <Provider store={store}>
                     <Main />
                 </Provider>

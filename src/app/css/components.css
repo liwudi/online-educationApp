@@ -4,3 +4,15 @@
     height: 45px;
     font-size: 15px;
 }
+
+
+
+/*搜索框*/
+.searchIcon{
+    width: 20px;
+    height: 20px;
+}
+.search-container{
+    width: 70%;
+    border-radius: 10px;
+}
