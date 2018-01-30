@@ -8,4 +8,16 @@ const LOGIN_STATE = {
     userInfo: {},
     error: {},
     status: TYPES.LOGGED_NULL
+};
+
+export function userStore(state=LOGIN_STATE,action){
+    switch (action.type){
+        case TYPES.LOGGED_IN:
+            return Object.assign(LOGIN_STATE,{
+                taskContent:action.taskContent
+            });
+            break;
+        default:
+            return state
+    }
 }
