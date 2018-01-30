@@ -7,7 +7,7 @@ export default class Main extends Component{
     render(){
         return (
             <div>
-                123
+                123，我是中国人，我是中国人，我是中国人，我是中国人，我是中国人
             </div>
         )
     }
