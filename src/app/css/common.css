@@ -10,12 +10,39 @@ html,body,.wrapper,#root{
 a{
     text-decoration: none;
 }
-.fx1{
-    flex: 1;
-}
+
 .autoBox{
     overflow: auto;
 }
+
+/*flex布局*/
+.disFx{
+    display: flex;
+    width: 100%;
+}
+.fx1{
+    flex: 1;
+}
+.space-between{
+    justify-content: space-between;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rowCenter{
+    display: flex;
+    align-items: center;
+}
+.colCenter{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 .topBanner{
     width: 100%;
     height: 50px;
@@ -47,27 +74,11 @@ a{
     flex-direction: column;
     flex: 1;
 }
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.rowCenter{
-    display: flex;
-    align-items: center;
-}
-.colCenter{
-    display: flex;
-    flex-direction: column;
-}
+
 .baseViewDom{
     width: 100%;
     height: 50px;
     background-color: white;
-}
-.disFx{
-    display: flex;
-    width: 100%;
 }
 .iconRightArrow{
     width: 20px;
@@ -112,6 +123,7 @@ a{
     border-radius: 10px;
     background-color: white;
 }
+
 /*字体颜色*/
 .colorRed{
     color: red;
@@ -128,6 +140,7 @@ a{
 .colorNote1{
     color: #999999;
 }
+
 /*背景颜色*/
 .bgWhite{
     background-color: white;
@@ -141,6 +154,7 @@ a{
 .bgOrange{
     background-color: orange;
 }
+
 /*边距*/
 .marginTop{
     margin-top: 10px;
@@ -172,6 +186,7 @@ a{
 .paddingBottom{
     padding-bottom: 10px;
 }
+
 /*边框border*/
 .borderBottom{
     border-bottom: 1px solid #cccccc;
@@ -186,9 +201,9 @@ a{
     border: 1px solid #cccccc;
 }
 
+/*字体定制*/
 .note{
     color: #aaaaaa;
-
 }
 .one-line{
     width: 200px;
@@ -209,6 +224,7 @@ a{
 .bigSize{
     font-size: 16px;
 }
+
 /*按钮*/
 .bigBtn{
     width: 80%;
@@ -221,3 +237,4 @@ a{
     width: 100%;
     height: 100px;
 }
+
