@@ -3,9 +3,18 @@
  */
 import React, { Component } from 'react';
 import SearchComponent from '../../../components/SearchComponent';
+import PageNav from '../../../components/PageNav';
+import AudioItem from '../components/AudioItem';
+import VideoItem from '../components/VideoItem';
+import CompanyItem from '../components/CompanyItem';
+
+
 export default class Home extends Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            src: 'https://intl.rakuten-static.com/b/gs/en/event/freeshipping/20180123/img/840x417cn.jpg'
+        }
     }
     render(){
         return (
@@ -18,37 +27,86 @@ export default class Home extends Component{
                 </div>
 
                 {/*视频区*/}
-                <div className="area-video">
-                    <div className="disFx space-between ">
-                        <img src={require('../../../assets/myicon/destinationed.png')} alt=""/>
-                        <span>更多视频>></span>
+                <div className="area-video padding boxSizing">
+                    <PageNav
+                        title='视频区'
+                    ></PageNav>
+                    <div className="boxSizing disFx space-between" style={{flexWrap: 'wrap'}}>
+
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
                     </div>
 
                 </div>
 
                 {/*音频区*/}
-                <div className="area-audio">
-                    <div>
-                        <img src={require('../../../assets/myicon/destinationed.png')} alt=""/>
-                        <span>更多视频>></span>
+                <div className="area-audio padding">
+                    <PageNav
+                        title='音频区'
+                    ></PageNav>
+                    <div className="boxSizing">
+                        <AudioItem
+                            src={this.state.src}
+                        />
+                        <AudioItem
+                            src={this.state.src}
+                        />
+                        <AudioItem
+                            src={this.state.src}
+                        />
                     </div>
 
                 </div>
 
                 {/*会员专享*/}
-                <div className="area-member">
-                    <div>
-                        <img src={require('../../../assets/myicon/destinationed.png')} alt=""/>
-                        <span>更多视频>></span>
+                <div className="area-member padding">
+                    <PageNav
+                        title="会员专享"
+                    ></PageNav>
+                    <div className="boxSizing disFx space-between">
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
+                        <VideoItem
+                            src={this.state.src}
+                        />
                     </div>
 
                 </div>
 
                 {/*公司动态*/}
-                <div className="area-company">
-                    <div>
-                        <img src={require('../../../assets/myicon/destinationed.png')} alt=""/>
-                        <span>更多视频>></span>
+                <div className="area-company padding">
+                    <PageNav
+                        title="公司动态"
+                    ></PageNav>
+                    <div className="boxSizing disFx space-between marginTop">
+                        <CompanyItem
+                            src={this.state.src}
+                        />
+                        <CompanyItem
+                            src={this.state.src}
+                        />
+                        <CompanyItem
+                            src={this.state.src}
+                        />
+
+
                     </div>
 
                 </div>
