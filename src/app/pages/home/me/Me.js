@@ -15,9 +15,13 @@ export default class Home extends Component{
     render(){
         return (
             <div className="fx1 autoBox bgf1 boxSizing">
-                <div className="height150 bgOrange">
-                    <div className="bigortrait">
-                        <img className="bigortrait" src={this.state.src} alt="头像"/>
+                <div className="height150 bgOrange rowCenter">
+                    <div className="bigortrait marginLeft">
+                        <img className="bigPortrait" src={this.state.src} alt="头像"/>
+                    </div>
+                    <div className="marginLeft">
+                        <p>mapbar_front</p>
+                        <p className="bgWhite center marginTop" style={{borderRadius: '4px'}}>注册会员</p>
                     </div>
                 </div>
                 <ViewForRightArrow
