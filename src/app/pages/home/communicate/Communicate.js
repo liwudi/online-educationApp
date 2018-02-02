@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import HotNews from './hotnews/HotNews'
+import Company from './company/Company'
 
 
 export default class Home extends Component{
@@ -13,12 +14,12 @@ export default class Home extends Component{
     render(){
         return (
             <div className="fx1 autoBox">
-                <div className="disFx space-around nav rowCenter">
+                <div className="disFx space-around nav rowCenter borderBottom">
                     <span><Link to="/communicate/company">公司动态</Link></span>
                     <span><Link to="/communicate/new">最新动态</Link></span>
                 </div>
-                <div className="fx1">
-                    {/*<Route path="/company" component={company}/>*/}
+                <div className="fx1 autoBox">
+                    <Route path="/communicate/company" component={Company}/>
                     <Route path="/communicate/new" component={HotNews}/>
                 </div>
             </div>

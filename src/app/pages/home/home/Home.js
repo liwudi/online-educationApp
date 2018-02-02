@@ -22,7 +22,7 @@ export default class Home extends Component{
                 <div className="center paddingTop paddingBottom">
                     <SearchComponent/>
                 </div>
-                <div className="swiper">
+                <div className="height200">
                     <img className="wrapper" src="https://intl.rakuten-static.com/b/gs/en/event/freeshipping/20180123/img/840x417cn.jpg" alt=""/>
                 </div>
 

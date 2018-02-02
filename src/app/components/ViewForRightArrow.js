@@ -26,7 +26,7 @@ export default class HomePage extends Component{
         }else{
             return (
                 <div className="rowCenter">
-                    <span className="note">未填写</span>
+                    <span className="note"></span>
                     <img className="iconRightArrow" src={require("../assets/images/rightArrow.png")} />
                 </div>
             )
