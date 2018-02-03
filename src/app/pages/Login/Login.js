@@ -18,7 +18,7 @@ export default class Login extends Component{
         return (
             <div className="pageBox" style={{position:'relative'}}>
                 <TopBanner title="登录" router={this.props.history} />
-                <div className="fx1 boxSizing padding center colCenter" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
+                <div className="fx1 boxSizing padding colCenter" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
 
                     <div className="inputBox rowCenter disFx inputContainer border">
                         <div className="center" style={{width:'40px'}}>

@@ -29,23 +29,23 @@ export default class HomePage extends Component{
 
                 <div className="fx1 boxSizing" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
 
-                    <Route path="/home" component={Home}/>
-                    <Route path="/me" component={Me}/>
-                    <Route path="/communicate" component={Communicate}/>
-                    <Route path="/classify" component={Classify}/>
+                    <Route path="/home/home" component={Home}/>
+                    <Route path="/home/me" component={Me}/>
+                    <Route path="/home/communicate" component={Communicate}/>
+                    <Route path="/home/classify" component={Classify}/>
                 </div>
-                <div className="nav">
+                <div className="nav borderTop">
                     <div className="fx1 center">
-                        <Link to="/home">首页</Link>
+                        <Link to="/home/home">首页</Link>
                     </div>
                     <div className="fx1 center">
-                        <Link to="/classify">分类</Link>
+                        <Link to="/home/classify">分类</Link>
                     </div>
                     <div className="fx1 center">
-                        <Link to="/communicate">交流</Link>
+                        <Link to="/home/communicate">交流</Link>
                     </div>
                     <div className="fx1 center">
-                        <Link to="/me">我的</Link>
+                        <Link to="/home/me">我的</Link>
                     </div>
                 </div>
             </div>

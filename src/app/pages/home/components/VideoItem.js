@@ -18,7 +18,7 @@ export default class AudioItem extends Component{
                     <div>4星级</div>
                     <div className="disFx space-between">
                         <span className="colorRed">￥398</span>
-                        <span className="colorNote">1909人学过</span>
+                        <span className="colorNote">1909人</span>
                     </div>
                 </div>
             </div>

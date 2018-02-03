@@ -10,7 +10,7 @@ export default class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            src: 'https://intl.rakuten-static.com/b/gs/en/event/freeshipping/20180123/img/840x417cn.jpg',
+            src: 'http://img4.imgtn.bdimg.com/it/u=3950028239,2497327107&fm=27&gp=0.jpg',
             currentIndex: 0,
             typeList: ['视频区','音频区','文字区','会员区']
         }

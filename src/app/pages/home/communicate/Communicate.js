@@ -15,12 +15,12 @@ export default class Home extends Component{
         return (
             <div className="fx1 autoBox">
                 <div className="disFx space-around nav rowCenter borderBottom">
-                    <span><Link to="/communicate/company">公司动态</Link></span>
-                    <span><Link to="/communicate/new">最新动态</Link></span>
+                    <span><Link to="/home/communicate/company">公司动态</Link></span>
+                    <span><Link to="/home/communicate/new">最新动态</Link></span>
                 </div>
                 <div className="fx1 autoBox">
-                    <Route path="/communicate/company" component={Company}/>
-                    <Route path="/communicate/new" component={HotNews}/>
+                    <Route path="/home/communicate/company" component={Company}/>
+                    <Route path="/home/communicate/new" component={HotNews}/>
                 </div>
             </div>
         )

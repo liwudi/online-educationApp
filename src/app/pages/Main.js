@@ -29,8 +29,9 @@ export default class Main extends Component{
                         {/*<Route path="/taskDetail/:id" component={TaskDetailPage} />*/}
                         {/*<Route path="/editTask/:type" component={EditTask} />*/}
 
-                        {/*<Route path="/home" component={HomePage} />*/}
-                        <Route path="/" component={HomePage}/>
+
+                        <Route path="/home" component={HomePage} />
+                        <Route path="/" component={Login}/>
                     </Switch>
 
                 </div>

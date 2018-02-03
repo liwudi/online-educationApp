@@ -13,7 +13,7 @@ export default class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            src: 'https://intl.rakuten-static.com/b/gs/en/event/freeshipping/20180123/img/840x417cn.jpg'
+            src: 'http://img1.imgtn.bdimg.com/it/u=2364244149,3298797080&fm=27&gp=0.jpg'
         }
     }
     render(){
