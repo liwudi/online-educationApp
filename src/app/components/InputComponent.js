@@ -10,17 +10,23 @@ export default class InputComponent extends Component{
     }
     render(){
         return (
-            <div style={this.props.style} className="inputBox rowCenter disFx inputContainer border">
-                <div className="center" style={{width:'40px'}}>
-                    <img style={{width:'20px',height:'20px'}} src={require("../assets/images/leftArrow.png")} alt=""/>
+            <div>
+                <div style={this.props.style} className="inputBox rowCenter disFx inputContainer border">
+                    <div className="center" style={{width:'40px'}}>
+                        <img style={{width:'20px',height:'20px'}} src={require("../assets/images/leftArrow.png")} alt=""/>
+                    </div>
+                    <div className="fx1">
+                        <input
+                            className="inputDefault"
+                            type="text"
+                            placeholder={this.props.placeholder || "请输入手机号码"} />
+                    </div>
                 </div>
-                <div className="fx1">
-                    <input
-                        className="inputDefault"
-                        type="text"
-                        placeholder={this.props.placeholder || "请输入手机号码"} />
+                <div style={{display: this.props.isShow?'block':'none'}} className="colorRed paddingTop">
+                    {this.props.tips || '用户输入不符合规则'}
                 </div>
             </div>
+
         )
     }
 }

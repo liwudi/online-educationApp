@@ -9,6 +9,8 @@ const history = createBrowserHistory;
 
 import HomePage from './home/HomePage.js';
 import Login from './Login/Login.js';
+import Register from './register/Register.js';
+import GetCode from './findPassWord/GetCode.js';
 
 export default class Main extends Component{
     render(){
@@ -31,6 +33,8 @@ export default class Main extends Component{
 
 
                         <Route path="/home" component={HomePage} />
+                        <Route path="/register" component={Register}/>
+                        <Route path="/getcode" component={GetCode}/>
                         <Route path="/" component={Login}/>
                     </Switch>
 

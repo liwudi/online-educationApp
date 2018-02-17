@@ -1,5 +1,5 @@
 /**
- * Created by mapbar_front on 2018/1/30.
+ * Created by mapbar_front on 2018/2/17.
  */
 import React,{ Component } from 'react';
 
@@ -15,11 +15,9 @@ export default class Login extends Component{
             showPsdTips: false
         }
     }
-    loginEvent(){
-        this.props.history.push('/home')
-    }
-    registerEvent(){
-        this.props.history.push('/register')
+    getCodeEvent(){
+        alert('获取验证码');
+        //this.props.history.push('/home')
     }
     goPage(page){
         this.props.history.push(page)
@@ -27,32 +25,24 @@ export default class Login extends Component{
     render(){
         return (
             <div className="pageBox" style={{position:'relative'}}>
-                <TopBanner title="登录" router={this.props.history} />
+                <TopBanner title="获取验证码" router={this.props.history} />
                 <div className="fx1 boxSizing padding colCenter" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
 
                     <InputComponent
                         isShow={this.state.showPhoneTips}
                     />
-                    <InputComponent
-                        placeholder="请输入用户密码"
-                        style={{marginTop: '20px'}}
-                        isShow={this.state.showPsdTips}
-                        tips="用户密码应该是6到10位的数字或者字母"
-                    />
 
                     <Button
                         style={{marginTop: '20px',borderRadius:'5px',width: '100%', height:'45px'}}
-                        onClick={()=>this.loginEvent()}
+                        title="获取验证码"
+                        onClick={()=>this.getCodeEvent()}
                     />
 
                     <div className="disFx marginTop" style={{justifyContent:'space-between'}}>
                         <div
                             className="note"
-                            onClick={()=>this.registerEvent()}
-                        >注册</div>
-                        <div className="note"
-                            onClick={()=>this.goPage('/getcode')}
-                        >忘记密码</div>
+                            onClick={()=>this.goPage('/login')}
+                        >注册即表示同意<a>&lt;&lt;教育服务协议&gt;&gt;</a></div>
                     </div>
 
                 </div>
