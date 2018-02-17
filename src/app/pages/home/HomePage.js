@@ -2,12 +2,7 @@
  * Created by mapbar_front on 2018/1/30.
  */
 import React,{ Component } from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-
-
-
-import Audio from '../audio/Audio';
-import Vedio from '../vedio/Vedio';
+import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom';
 
 import Home from './home/Home';
 import Me from './me/Me';
@@ -29,6 +24,7 @@ export default class HomePage extends Component{
 
                 <div className="fx1 boxSizing" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
 
+                    <Route path="/home" render={()=><Redirect to="/home/home"/>} />
                     <Route path="/home/home" component={Home}/>
                     <Route path="/home/me" component={Me}/>
                     <Route path="/home/communicate" component={Communicate}/>
