@@ -8,12 +8,23 @@ export default class InputComponent extends Component{
     constructor(props){
         super(props)
     }
+    iconRender(){
+        if(this.props.type == 'password'){
+            return (
+                <img style={{width:'20px',height:'20px'}} src={require("../assets/icons/password.png")} alt=""/>
+            )
+        } else {
+            return (
+                <img style={{width:'20px',height:'20px'}} src={require("../assets/icons/account.png")} alt=""/>
+            )
+        }
+    }
     render(){
         return (
             <div>
                 <div style={this.props.style} className="inputBox rowCenter disFx inputContainer border">
                     <div className="center" style={{width:'40px'}}>
-                        <img style={{width:'20px',height:'20px'}} src={require("../assets/images/leftArrow.png")} alt=""/>
+                        {this.iconRender()}
                     </div>
                     <div className="fx1">
                         <input

@@ -40,6 +40,7 @@ export default class Login extends Component{
                     <InputComponent
                         placeholder="请输入用户密码"
                         style={{marginTop: '20px'}}
+                        type="password"
                         isShow={this.state.showPsdTips}
                     />
 

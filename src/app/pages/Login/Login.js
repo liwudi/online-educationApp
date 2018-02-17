@@ -35,6 +35,7 @@ export default class Login extends Component{
                     />
                     <InputComponent
                         placeholder="请输入用户密码"
+                        type="password"
                         style={{marginTop: '20px'}}
                         isShow={this.state.showPsdTips}
                         tips="用户密码应该是6到10位的数字或者字母"
