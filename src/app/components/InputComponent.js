@@ -19,6 +19,10 @@ export default class InputComponent extends Component{
             )
         }
     }
+    changeEvent(e){
+        var value = e.target.value;
+        this.props.onChange && this.props.onChange(value);
+    }
     render(){
         return (
             <div>
@@ -30,6 +34,7 @@ export default class InputComponent extends Component{
                         <input
                             className="inputDefault"
                             type="text"
+                            onChange={(e)=>this.changeEvent(e)}
                             placeholder={this.props.placeholder || "请输入手机号码"} />
                     </div>
                 </div>

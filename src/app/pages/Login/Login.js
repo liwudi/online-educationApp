@@ -11,9 +11,45 @@ export default class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
+            phone:'',
+            password:'',
             showPhoneTips: false,
             showPsdTips: false
         }
+    }
+    testPhone(){
+        var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        if(!reg.test(this.state.phone)){
+            this.setState({
+                showPhoneTips: true
+            })
+        } else {
+            this.setState({
+                showPhoneTips: false
+            })
+        }
+    }
+    testPsd(){
+        var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+        if(!reg.test(this.state.password)){
+            this.setState({
+                showPsdTips: true
+            })
+        } else {
+            this.setState({
+                showPsdTips: false
+            })
+        }
+    }
+    getPhone(value){
+        this.setState({
+            phone: value
+        })
+    }
+    getPsd(value){
+        this.setState({
+            password: value
+        })
     }
     loginEvent(){
         this.props.history.push('/home')
@@ -32,12 +68,14 @@ export default class Login extends Component{
 
                     <InputComponent
                         isShow={this.state.showPhoneTips}
+                        onChange={(value)=>{this.getPhone(value)}}
                     />
                     <InputComponent
                         placeholder="请输入用户密码"
                         type="password"
                         style={{marginTop: '20px'}}
                         isShow={this.state.showPsdTips}
+                        onChange={(value)=>{this.getPsd(value)}}
                         tips="用户密码应该是6到10位的数字或者字母"
                     />
 

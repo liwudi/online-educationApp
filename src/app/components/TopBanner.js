@@ -34,7 +34,7 @@ export default class TopBanner extends Component{
         return (
             <div style={this.props.style} className='topBanner rowCenter bgred'>
                 {this.leftView()}
-                <span className="fx1 center">
+                <span className="fx1 center colorWhite">
                     {this.props.title?this.props.title:"默认标题"}
                 </span>
                 {this.rightView()}
