@@ -106,7 +106,6 @@ export default class Home extends Component{
                             src={this.state.src}
                         />
 
-
                     </div>
 
                 </div>

@@ -28,12 +28,13 @@ export default class HomePage extends Component{
             <div className="pageBox" style={{position:'relative'}}>
 
                 <div className="fx1 boxSizing" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
-
-                    <Route path="/home" render={()=><Redirect to="/home/home"/>} />
+                    <Switch>
                     <Route path="/home/home" component={Home}/>
                     <Route path="/home/me" component={Me}/>
                     <Route path="/home/communicate" component={Communicate}/>
                     <Route path="/home/classify" component={Classify}/>
+                    <Route path="/home" render={()=><Redirect to="/home/home"/>} />
+                    </Switch>
                 </div>
                 <div className="nav borderTop">
                     <div onClick={()=>this.setCurrentIndex(1)} className="fx1 center colCenter">
