@@ -13,8 +13,13 @@ export default class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            src: 'http://img1.imgtn.bdimg.com/it/u=2364244149,3298797080&fm=27&gp=0.jpg'
+            src: 'http://img1.imgtn.bdimg.com/it/u=2364244149,3298797080&fm=27&gp=0.jpg',
+            videoList: [{},{},{},{}]
         }
+    }
+    goVedioDetail(){
+        alert(1);
+        this.props.history.push('/audio');
     }
     render(){
         return (
@@ -32,19 +37,18 @@ export default class Home extends Component{
                         title='视频区'
                     ></PageNav>
                     <div className="boxSizing disFx space-between" style={{flexWrap: 'wrap'}}>
-
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
+                        {/*说明：用于展示视屏列表*/}
+                        {
+                            this.state.videoList.map((item,index)=>{
+                                return (
+                                    <VideoItem
+                                        key={index}
+                                        onClick={()=>this.goVedioDetail()}
+                                        src={this.state.src}
+                                    />
+                                )
+                            })
+                        }
                     </div>
 
                 </div>

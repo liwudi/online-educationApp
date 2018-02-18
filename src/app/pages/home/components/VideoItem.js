@@ -9,7 +9,11 @@ export default class AudioItem extends Component{
     }
     render(){
         return (
-            <div style={this.props.style} className="video-item disFx colCenter marginTop">
+            <div
+                style={this.props.style}
+                className="video-item disFx colCenter marginTop"
+                onClick={this.props.onClick || null}
+            >
                 <div className="fx2">
                     <img className="imgDefault" src={this.props.src} alt=""/>
                 </div>
