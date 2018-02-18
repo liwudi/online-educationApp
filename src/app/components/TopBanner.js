@@ -16,20 +16,28 @@ export default class TopBanner extends Component{
         }else{
             return (
                 <div onClick={() => this.goBack()} className="topBannerLeft center" >
-                    <img style={{width:'20px',height:'20px'}} src={require("../assets/images/leftArrow.png")} />
+                    <img style={{width:'25px',height:'25px'}} src={require("../assets/icons/back.png")} />
                 </div>
             )
 
         }
 
     }
+    rightView(){
+        if(this.props.rightView){
+            return this.props.rightView();
+        }else {
+            return null
+        }
+    }
     render(){
         return (
-            <div className='topBanner rowCenter'>
+            <div style={this.props.style} className='topBanner rowCenter bgred'>
                 {this.leftView()}
-                <span>
+                <span className="fx1 center">
                     {this.props.title?this.props.title:"默认标题"}
                 </span>
+                {this.rightView()}
             </div>
         )
     }

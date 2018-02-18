@@ -29,11 +29,11 @@ export default class HomePage extends Component{
 
                 <div className="fx1 boxSizing" style={{overflow:'auto',borderTop:'1px solid #cccccc'}}>
                     <Switch>
-                    <Route path="/home/home" component={Home}/>
-                    <Route path="/home/me" component={Me}/>
-                    <Route path="/home/communicate" component={Communicate}/>
-                    <Route path="/home/classify" component={Classify}/>
-                    <Route path="/home" render={()=><Redirect to="/home/home"/>} />
+                        <Route path="/home/home" component={Home}/>
+                        <Route path="/home/me" component={Me}/>
+                        <Route path="/home/communicate" component={Communicate}/>
+                        <Route path="/home/classify" component={Classify}/>
+                        <Route path="/home" render={()=><Redirect to="/home/home"/>} />
                     </Switch>
                 </div>
                 <div className="nav borderTop">

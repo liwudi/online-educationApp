@@ -49,11 +49,7 @@ a{
 
 
 
-.topBanner{
-    width: 100%;
-    height: 50px;
-    background-color: white;
-}
+
 .iconDefault{
     width: 20px;
     height: 20px;
@@ -72,9 +68,22 @@ a{
     border:none;
     font-size: 14px;
 }
+.topBanner{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: relative;
+}
 .topBannerLeft{
-    width: 60px;
+    width: 25px;
     height:100%;
+    position: absolute;
+    left: 10px;
+}
+.topBannerRight{
+    margin-right: 10px;
+    position: absolute;
+    right: 10px;
 }
 .pageBox{
     display: flex;
@@ -257,6 +266,15 @@ a{
 }
 
 /*高度定制*/
+.height20{
+    height: 20px;
+}
+.height25{
+    height: 25px;
+}
+.height30{
+    height: 30px;
+}
 .height100{
     height: 100px;
 }
@@ -266,3 +284,4 @@ a{
 .height200{
     height: 200px;
 }
+

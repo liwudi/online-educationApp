@@ -12,6 +12,8 @@ import Login from './Login/Login.js';
 import Register from './register/Register.js';
 import GetCode from './findPassWord/GetCode.js';
 import Audio from './audio/Audio.js'
+//用户相关的路由
+import UserInfo from './home/me/userInfo/UserInfo.js';
 
 export default class Main extends Component{
     render(){
@@ -37,6 +39,11 @@ export default class Main extends Component{
                         <Route path="/audio" component={Audio} />
                         <Route path="/register" component={Register}/>
                         <Route path="/getcode" component={GetCode}/>
+
+
+                        {/*用户相关的路由*/}
+                        <Route path="/userInfo" component={UserInfo} />
+                        {/*路由重定向*/}
                         <Route path="/" component={Login}/>
                     </Switch>
 
