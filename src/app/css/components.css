@@ -13,8 +13,9 @@
     height: 20px;
 }
 .search-container{
-    width: 70%;
-    border-radius: 10px;
+    width: 90%;
+    border-radius: 20px;
+    background-color: #eeeeee;
 }
 
 /*页面导航器*/

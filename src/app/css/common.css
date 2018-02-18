@@ -205,6 +205,9 @@ a{
 .paddingBottom{
     padding-bottom: 10px;
 }
+.paddingSmall{
+    padding: 5px;
+}
 
 /*边框border*/
 .borderBottom{
