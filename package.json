@@ -36,7 +36,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "es6-promise": "^4.1.1",
+    "es6-promise": "^4.2.4",
     "history": "^1.17.0",
     "lodash": "^4.17.4",
     "react": "^16.0.0",

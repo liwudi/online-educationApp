@@ -5,7 +5,9 @@ import React,{ Component } from 'react';
 
 import TopBanner from '../../components/TopBanner';
 import InputComponent from '../../components/InputComponent';
-import Button from '../../components/Button.js'
+import Button from '../../components/Button.js';
+
+import { getClass } from '../../services/UserService.js'
 
 export default class Login extends Component{
     constructor(props){
@@ -59,6 +61,16 @@ export default class Login extends Component{
     }
     goPage(page){
         this.props.history.push(page)
+    }
+    componentDidMount(){
+
+        getClass().
+            then((res)=>{
+                console.log('获取分类',res);
+            })
+            .catch(err=>{
+                console.log('错误',err);
+            });
     }
     render(){
         return (
