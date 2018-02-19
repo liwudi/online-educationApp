@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import SearchComponent from '../../../components/SearchComponent';
 import PageNav from '../../../components/PageNav';
 import AudioItem from '../components/AudioItem';
-import VideoItem from '../components/VideoItem';
+import VedioItem from '../components/VedioItem';
 import CompanyItem from '../components/CompanyItem';
 
 
@@ -16,6 +16,7 @@ export default class Home extends Component{
             src: 'http://8.xiustatic.com/m/topicType/2018/02/11/f16a596a-6962-4085-9129-a151a415b822.jpg',
             src1: 'https://img30.360buyimg.com/da/s750x366_jfs/t11278/255/899926154/116991/f64c29a6/59fad637N96104620.jpg',
             videoList: [{},{},{},{}],
+            audioList: [{},{},{}],
             searchContent: '',
             bannerList: [
                 {
@@ -98,7 +99,7 @@ export default class Home extends Component{
                         {
                             this.state.videoList.map((item,index)=>{
                                 return (
-                                    <VideoItem
+                                    <VedioItem
                                         key={index}
                                         onClick={()=>this.goVedioDetail()}
                                         src={this.state.src}
@@ -116,15 +117,19 @@ export default class Home extends Component{
                         title='音频区'
                     ></PageNav>
                     <div className="boxSizing">
-                        <AudioItem
-                            src={this.state.src1}
-                        />
-                        <AudioItem
-                            src={this.state.src1}
-                        />
-                        <AudioItem
-                            src={this.state.src1}
-                        />
+                        {/*用于展示音频列表*/}
+                        {
+                            this.state.audioList.map((item,index)=>{
+                                return (
+                                    <AudioItem
+                                        src={this.state.src1}
+                                        key={index}
+                                        onClick={()=>this.goVedioDetail()}
+                                    />
+                                )
+                            })
+                        }
+
                     </div>
 
                 </div>
@@ -135,16 +140,16 @@ export default class Home extends Component{
                         {/*title="会员专享"*/}
                     {/*></PageNav>*/}
                     {/*<div className="boxSizing disFx space-between">*/}
-                        {/*<VideoItem*/}
+                        {/*<VedioItem*/}
                             {/*src={this.state.src}*/}
                         {/*/>*/}
-                        {/*<VideoItem*/}
+                        {/*<VedioItem*/}
                             {/*src={this.state.src}*/}
                         {/*/>*/}
-                        {/*<VideoItem*/}
+                        {/*<VedioItem*/}
                             {/*src={this.state.src}*/}
                         {/*/>*/}
-                        {/*<VideoItem*/}
+                        {/*<VedioItem*/}
                             {/*src={this.state.src}*/}
                         {/*/>*/}
                     {/*</div>*/}
