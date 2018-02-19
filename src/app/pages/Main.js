@@ -11,17 +11,14 @@ import HomePage from './home/HomePage.js';
 import Login from './Login/Login.js';
 import Register from './register/Register.js';
 import GetCode from './findPassWord/GetCode.js';
-import Audio from './audio/Audio.js'
+import Audio from './audio/Audio.js';
+import Vedio from './vedio/Vedio.js';
 //用户相关的路由
 import UserInfo from './home/me/userInfo/UserInfo.js';
 
 export default class Main extends Component{
     render(){
-        // return (
-        //     <div>
-        //         123，我是中国人，我是中国人，我是中国人，我是中国人，我是中国人
-        //     </div>
-        // )
+
         return (
             <Router history={history}>
                 <div className="disFx boxSizing" style={{width:"100%",height:'100%',overflow:'hidden'}}>
@@ -37,6 +34,7 @@ export default class Main extends Component{
 
                         <Route path="/home" component={HomePage} />
                         <Route path="/audio" component={Audio} />
+                        <Route path="/vedio" component={Vedio} />
                         <Route path="/register" component={Register}/>
                         <Route path="/getcode" component={GetCode}/>
 

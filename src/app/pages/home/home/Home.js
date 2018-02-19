@@ -13,14 +13,15 @@ export default class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            src: 'http://img1.imgtn.bdimg.com/it/u=2364244149,3298797080&fm=27&gp=0.jpg',
+            src: 'http://8.xiustatic.com/m/topicType/2018/02/11/f16a596a-6962-4085-9129-a151a415b822.jpg',
+            src1: 'https://img30.360buyimg.com/da/s750x366_jfs/t11278/255/899926154/116991/f64c29a6/59fad637N96104620.jpg',
             videoList: [{},{},{},{}],
             searchContent: '',
             bannerList: [
                 {
                     img: "https://intl.rakuten-static.com/b/gs/en/event/freeshipping/20180123/img/840x417cn.jpg"
                 },{
-                    img: "https://m.360buyimg.com/img/jfs/t2977/335/1927273397/18081/64a032d5/5796df21N0c6edd4e.png"
+                    img: "https://aecpm.alicdn.com/simba/img/TB15tIjGVXXXXcoapXXSutbFXXX.jpg_q50.jpg"
                 },{
                     img: "https://img30.360buyimg.com/da/s750x366_jfs/t11278/255/899926154/116991/f64c29a6/59fad637N96104620.jpg"
                 }
@@ -30,7 +31,7 @@ export default class Home extends Component{
     }
     goVedioDetail(){
         alert(1);
-        this.props.history.push('/audio');
+        this.props.history.push('/vedio');
     }
     getValue(value){
         this.setState({
@@ -45,7 +46,7 @@ export default class Home extends Component{
         this.getBannerList();
     }
     componentWillUnMount(){
-        clearInterval(this.timer);
+        this.timer && clearInterval(this.timer);
     }
     getBannerList(){
         console.log('获取轮播列表的逻辑');
@@ -88,7 +89,7 @@ export default class Home extends Component{
                 </div>
 
                 {/*视频区*/}
-                <div className="area-video padding boxSizing">
+                <div className="area-video padding boxSizing marginButtom">
                     <PageNav
                         title='视频区'
                     ></PageNav>
@@ -110,65 +111,65 @@ export default class Home extends Component{
                 </div>
 
                 {/*音频区*/}
-                <div className="area-audio padding">
+                <div style={{borderTop: '20px solid #eeeeee'}} className="area-audio padding">
                     <PageNav
                         title='音频区'
                     ></PageNav>
                     <div className="boxSizing">
                         <AudioItem
-                            src={this.state.src}
+                            src={this.state.src1}
                         />
                         <AudioItem
-                            src={this.state.src}
+                            src={this.state.src1}
                         />
                         <AudioItem
-                            src={this.state.src}
+                            src={this.state.src1}
                         />
                     </div>
 
                 </div>
 
                 {/*会员专享*/}
-                <div className="area-member padding">
-                    <PageNav
-                        title="会员专享"
-                    ></PageNav>
-                    <div className="boxSizing disFx space-between">
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                        <VideoItem
-                            src={this.state.src}
-                        />
-                    </div>
+                {/*<div className="area-member padding">*/}
+                    {/*<PageNav*/}
+                        {/*title="会员专享"*/}
+                    {/*></PageNav>*/}
+                    {/*<div className="boxSizing disFx space-between">*/}
+                        {/*<VideoItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                        {/*<VideoItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                        {/*<VideoItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                        {/*<VideoItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                    {/*</div>*/}
 
-                </div>
+                {/*</div>*/}
 
                 {/*公司动态*/}
-                <div className="area-company padding">
-                    <PageNav
-                        title="公司动态"
-                    ></PageNav>
-                    <div className="boxSizing disFx space-between marginTop">
-                        <CompanyItem
-                            src={this.state.src}
-                        />
-                        <CompanyItem
-                            src={this.state.src}
-                        />
-                        <CompanyItem
-                            src={this.state.src}
-                        />
+                {/*<div className="area-company padding">*/}
+                    {/*<PageNav*/}
+                        {/*title="公司动态"*/}
+                    {/*></PageNav>*/}
+                    {/*<div className="boxSizing disFx space-between marginTop">*/}
+                        {/*<CompanyItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                        {/*<CompanyItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
+                        {/*<CompanyItem*/}
+                            {/*src={this.state.src}*/}
+                        {/*/>*/}
 
-                    </div>
+                    {/*</div>*/}
 
-                </div>
+                {/*</div>*/}
             </div>
         )
     }
