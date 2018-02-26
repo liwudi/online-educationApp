@@ -13,7 +13,7 @@ export default class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            src: 'http://8.xiustatic.com/m/topicType/2018/02/11/f16a596a-6962-4085-9129-a151a415b822.jpg',
+            src: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=1842512496,3591811004&fm=202&mola=new&crop=v1',
             src1: 'https://img30.360buyimg.com/da/s750x366_jfs/t11278/255/899926154/116991/f64c29a6/59fad637N96104620.jpg',
             videoList: [{},{},{},{}],
             audioList: [{},{},{}],
@@ -31,7 +31,6 @@ export default class Home extends Component{
         }
     }
     goVedioDetail(){
-        alert(1);
         this.props.history.push('/vedio');
     }
     getValue(value){
